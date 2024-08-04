@@ -72,7 +72,7 @@ void ASanjikun::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ASanjikun::Move);
 
 		// Use Item
-		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Triggered, this, &ASanjikun::UseItem);
+		EnhancedInputComponent->BindAction(UseItemAction, ETriggerEvent::Started, this, &ASanjikun::UseItem);
 	}
 }
 
